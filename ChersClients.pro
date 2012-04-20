@@ -12,9 +12,10 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    pacientview.cpp \
     pacientscene.cpp
 
 HEADERS  += mainwindow.h \
-    pacientview.h \
     pacientscene.h
+
+RESOURCES += \
+    data.qrc

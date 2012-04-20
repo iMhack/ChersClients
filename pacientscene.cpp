@@ -2,7 +2,6 @@
 #include <QGraphicsSceneMouseEvent>
 #include <QPainter>
 #include <QMenu>
-#include <QInputDialog>
 #include <QDebug>
 
 Bubble::Bubble(QGraphicsItem *parent) :
@@ -29,7 +28,7 @@ Bubble::~Bubble()
 
 void Bubble::setText(const QString &text)
 {
-    _text->setPlainText(text);
+    _text->setHtml(text);
     QRectF rect = _text->boundingRect();
     QPointF center = _rectangle->pos();
 
@@ -52,12 +51,9 @@ QRectF Bubble::boundingRect() const
 
 void Bubble::changeText()
 {
-    bool ok;
-    QString newtext = QInputDialog::getText(0, "Modify bubble", "Enter the text here", QLineEdit::Normal, _text->toPlainText(), &ok);
-
-    if (ok) {
-        setText(newtext);
-    }
+    TextEditor dialog(_text->toHtml());
+    if (dialog.exec() == QDialog::Accepted)
+        setText(dialog.html());
 }
 
 void Bubble::removeBubble()
@@ -89,6 +85,9 @@ void Bubble::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
 
 void Bubble::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
+    Q_UNUSED(painter);
+    Q_UNUSED(option);
+    Q_UNUSED(widget);
 }
 
 void Bubble::updateLine()
@@ -99,9 +98,18 @@ void Bubble::updateLine()
     _line->setLine(QLineF(QPointF(0, 0), _rectangle->pos() + p));
 }
 
+
+
+
+
+
+
+
 PacientScene::PacientScene(QObject *parent) :
     QGraphicsScene(parent)
 {
+    addPixmap(QPixmap(":/images/corps.jpg"));
+
     _menu = new QMenu();
     _menu->addAction("New bubble...", this, SLOT(createBubble()));
 }
@@ -113,12 +121,12 @@ PacientScene::~PacientScene()
 
 void PacientScene::createBubble()
 {
-//    QMenu *sender = qobject_cast<QMenu *>(sender());
-
     Bubble *bubble = new Bubble();
     bubble->setText("Write text here...");
     bubble->setPos(_lastMousePressPosition);
     addItem(bubble);
+
+    bubble->changeText();
 }
 
 void PacientScene::mousePressEvent(QGraphicsSceneMouseEvent *event)
@@ -133,4 +141,33 @@ void PacientScene::mousePressEvent(QGraphicsSceneMouseEvent *event)
 
         _lastMousePressPosition = event->scenePos();
     }
+}
+
+
+
+#include <QVBoxLayout>
+#include <QDialogButtonBox>
+
+TextEditor::TextEditor(const QString &html, QWidget *parent) :
+    QDialog(parent)
+{
+    _textEdit = new QTextEdit(this);
+    _textEdit->setHtml(html);
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Save | QDialogButtonBox::Cancel, Qt::Horizontal, this);
+    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+
+    QVBoxLayout *layout = new QVBoxLayout(this);
+    layout->addWidget(_textEdit);
+    layout->addWidget(buttonBox);
+
+//    QAction *underline = new QAction(this);
+//    underline->setShortcut(QKeySequence(QKeySequence::Underline));
+//    connect(underline, SIGNAL(triggered(bool)), _textEdit, SLOT(setFontUnderline(bool)));
+}
+
+QString TextEditor::html() const
+{
+    return _textEdit->toHtml();
 }

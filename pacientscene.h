@@ -6,6 +6,20 @@
 #include <QGraphicsRectItem>
 #include <QGraphicsTextItem>
 #include <QGraphicsLineItem>
+#include <QImage>
+#include <QDialog>
+#include <QTextEdit>
+
+class TextEditor : public QDialog
+{
+    Q_OBJECT
+public:
+    TextEditor(const QString &html, QWidget *parent = 0);
+    QString html() const;
+
+private:
+    QTextEdit *_textEdit;
+};
 
 class Bubble : public QGraphicsObject
 {
