@@ -13,14 +13,21 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     pacientscene.cpp \
-    dialogtexteditor.cpp
+    dialogtexteditor.cpp \
+    centralwidget.cpp \
+    formpacientssheets.cpp \
+    database.cpp
 
 HEADERS  += mainwindow.h \
     pacientscene.h \
-    dialogtexteditor.h
+    dialogtexteditor.h \
+    centralwidget.h \
+    formpacientssheets.h \
+    database.h
 
 RESOURCES += \
     data.qrc
 
 FORMS += \
-    dialogtexteditor.ui
+    dialogtexteditor.ui \
+    formpacientssheets.ui
