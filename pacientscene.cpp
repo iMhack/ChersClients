@@ -3,6 +3,7 @@
 #include <QPainter>
 #include <QMenu>
 #include <QDebug>
+#include "dialogtexteditor.h"
 
 Bubble::Bubble(QGraphicsItem *parent) :
     QGraphicsObject(parent)
@@ -12,13 +13,14 @@ Bubble::Bubble(QGraphicsItem *parent) :
     _menu->addAction("Remove bubble", this, SLOT(removeBubble()));
 
     _line = new QGraphicsLineItem(this);
-    _line->setPen(QPen(QBrush(Qt::darkBlue), 2.0, Qt::DashLine, Qt::RoundCap));
+    _line->setPen(QPen(QBrush(QColor(Qt::blue)), 4.0, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
 
     _rectangle = new QGraphicsRectItem(this);
-    _rectangle->setPen(QPen(QBrush(Qt::blue), 2.0, Qt::DashLine, Qt::RoundCap));
+    _rectangle->setPen(QPen(QBrush(QColor(Qt::blue)), 4.0, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
+    _rectangle->setBrush(QBrush(QColor(50, 50, 255, 50)));
 
     _text = new QGraphicsTextItem(this);
-    _text->setDefaultTextColor(Qt::red);
+    _text->setDefaultTextColor(Qt::black);
 }
 
 Bubble::~Bubble()
@@ -51,7 +53,7 @@ QRectF Bubble::boundingRect() const
 
 void Bubble::changeText()
 {
-    TextEditor dialog(_text->toHtml());
+    DialogTextEditor dialog(_text->toHtml());
     if (dialog.exec() == QDialog::Accepted)
         setText(dialog.html());
 }
@@ -92,10 +94,12 @@ void Bubble::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
 
 void Bubble::updateLine()
 {
-    QRectF r = _rectangle->rect();
-    QPointF p((_rectangle->pos().x() < 0.0 ? 0.5:-0.5) * r.width(),
-              (_rectangle->pos().y() < 0.0 ? 0.5:-0.5) * r.height());
+    QRectF r = _rectangle->rect(); r.moveCenter(_rectangle->pos());
+    QPointF p((r.center().x() < 0.0 ? 0.5:-0.5) * r.width(),
+              (r.center().y() < 0.0 ? 0.5:-0.5) * r.height());
     _line->setLine(QLineF(QPointF(0, 0), _rectangle->pos() + p));
+
+    _line->setVisible(!r.contains(0, 0));
 }
 
 
