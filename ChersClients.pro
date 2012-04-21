@@ -14,20 +14,21 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     pacientscene.cpp \
     dialogtexteditor.cpp \
-    centralwidget.cpp \
     formpacientssheets.cpp \
-    database.cpp
+    database.cpp \
+    formvbroverview.cpp
 
 HEADERS  += mainwindow.h \
     pacientscene.h \
     dialogtexteditor.h \
-    centralwidget.h \
     formpacientssheets.h \
-    database.h
+    database.h \
+    formvbroverview.h
 
 RESOURCES += \
     data.qrc
 
 FORMS += \
     dialogtexteditor.ui \
-    formpacientssheets.ui
+    formpacientssheets.ui \
+    formvbroverview.ui

@@ -3,6 +3,9 @@
 #include <QAction>
 #include <QMenuBar>
 
+#include "formpacientssheets.h"
+#include "formvbroverview.h"
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
@@ -16,8 +19,14 @@ MainWindow::MainWindow(QWidget *parent)
     redoAction->setEnabled(false);
     addToolBar(toolbar);
 
-    _widgetMenu = new QMenu("Window", this);
-    menuBar()->addMenu(_widgetMenu);
+    QMenu *mainmenu = new QMenu("Start", this);
+    mainmenu->addAction(QIcon(":/images/butters.png"), "Open customer record...", this, SLOT(actionOpenClient()));
+    mainmenu->addAction(QIcon(":/images/butters.png"), "New customer record...", this, SLOT(actionNewClient()));
+    mainmenu->addAction(QIcon(":/images/butters.png"), "VBR Overview", this, SLOT(actionOpenVBROverview()));
+    menuBar()->addMenu(mainmenu);
+
+    _mdiArea = new QMdiArea(this);
+    setCentralWidget(_mdiArea);
 }
 
 MainWindow::~MainWindow()
@@ -25,54 +34,38 @@ MainWindow::~MainWindow()
     
 }
 
-void MainWindow::addCentralWidget(CentralWidget *widget)
-{
-    _centralWidgetList << widget;
-
-    _widgetMenu->addAction(widget->widgetName(), this, SLOT(actionChangeCentralWidget()));
-
-    if (_centralWidgetList.size() == 1)
-        changeCentralWidget(widget);
-}
-
 void MainWindow::actionUndo()
 {
     // annule la dernère action dans la BDD
-    CentralWidget *w = qobject_cast<CentralWidget *>(centralWidget());
-    w->updateData();
 }
 
 void MainWindow::actionRedo()
 {
     // annule la dernère annulation dans la BDD
-    CentralWidget *w = qobject_cast<CentralWidget *>(centralWidget());
-    w->updateData();
 }
 
-void MainWindow::actionChangeCentralWidget()
+void MainWindow::actionOpenClient()
 {
-    QAction *action = qobject_cast<QAction *>(sender());
+    // ouvre la liste des pacients
 
-    if (action != 0) {
-        int index = _widgetMenu->actions().indexOf(action);
-
-        if (index != -1) {
-            changeCentralWidget(_centralWidgetList.value(index, 0));
-        }
-    }
+    FormPacientsSheets *clientSheet = new FormPacientsSheets(this);
+    clientSheet->setAttribute(Qt::WA_DeleteOnClose);
+    _mdiArea->addSubWindow(clientSheet);
+    clientSheet->show();
 }
 
-void MainWindow::changeCentralWidget(CentralWidget *widget)
+void MainWindow::actionNewClient()
 {
-    CentralWidget *old = qobject_cast<CentralWidget *>(centralWidget());
+    FormPacientsSheets *clientSheet = new FormPacientsSheets(this);
+    clientSheet->setAttribute(Qt::WA_DeleteOnClose);
+    _mdiArea->addSubWindow(clientSheet);
+    clientSheet->show();
+}
 
-    if (old != 0) {
-        removeToolBar(old->toolBar());
-    }
-
-    if (widget != 0) {
-        if (widget->toolBar())
-            addToolBar(widget->toolBar());
-        setCentralWidget(widget);
-    }
+void MainWindow::actionOpenVBROverview()
+{
+    FormVBROverview *vbr = new FormVBROverview(this);
+    vbr->setAttribute(Qt::WA_DeleteOnClose);
+    _mdiArea->addSubWindow(vbr);
+    vbr->show();
 }

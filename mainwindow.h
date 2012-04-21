@@ -3,7 +3,8 @@
 
 #include <QtGui/QMainWindow>
 #include <QMenu>
-#include "centralwidget.h"
+#include <QMdiArea>
+#include <QMdiSubWindow>
 
 class MainWindow : public QMainWindow
 {
@@ -13,21 +14,18 @@ public:
     MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-    void addCentralWidget(CentralWidget *widget);
-
 private slots:
     void actionUndo();
     void actionRedo();
-    void actionChangeCentralWidget();
+    void actionOpenClient();
+    void actionNewClient();
+    void actionOpenVBROverview();
 
 private:
-    void changeCentralWidget(CentralWidget *widget);
-
     QAction *undoAction;
     QAction *redoAction;
 
-    QList<CentralWidget *> _centralWidgetList;
-    QMenu *_widgetMenu;
+    QMdiArea *_mdiArea;
 };
 
 #endif // MAINWINDOW_H
