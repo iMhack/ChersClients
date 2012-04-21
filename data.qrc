@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/images">
         <file>corps.jpg</file>
+        <file>undo.png</file>
     </qresource>
 </RCC>
