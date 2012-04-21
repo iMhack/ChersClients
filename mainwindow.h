@@ -13,9 +13,16 @@ public:
     MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+private slots:
+    void actionUndo();
+    void actionRedo();
+
 private:
     QGraphicsView *_pacientView;
     PacientScene *_pacientScene;
+
+    QAction *undoAction;
+    QAction *redoAction;
 };
 
 #endif // MAINWINDOW_H
