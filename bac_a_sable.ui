@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>702</width>
-    <height>600</height>
+    <width>668</width>
+    <height>378</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="1">
+   <item row="0" column="0">
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
       <number>1</number>
@@ -23,165 +23,126 @@
       <attribute name="title">
        <string>Général</string>
       </attribute>
-      <widget class="QLineEdit" name="lineEdit_4">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>201</width>
-         <height>22</height>
-        </rect>
-       </property>
-       <property name="toolTip">
-        <string>NOM</string>
-       </property>
-       <property name="inputMask">
-        <string/>
-       </property>
-       <property name="text">
-        <string>NOM</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_5">
-       <property name="geometry">
-        <rect>
-         <x>250</x>
-         <y>0</y>
-         <width>181</width>
-         <height>22</height>
-        </rect>
-       </property>
-       <property name="toolTip">
-        <string>Prénom</string>
-       </property>
-       <property name="inputMask">
-        <string/>
-       </property>
-       <property name="text">
-        <string>Prénom</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_6">
-       <property name="geometry">
-        <rect>
-         <x>470</x>
-         <y>0</y>
-         <width>191</width>
-         <height>22</height>
-        </rect>
-       </property>
-       <property name="toolTip">
-        <string>Date de naissance</string>
-       </property>
-       <property name="inputMask">
-        <string/>
-       </property>
-       <property name="text">
-        <string>Date de naissance</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>30</y>
-         <width>431</width>
-         <height>101</height>
-        </rect>
-       </property>
-       <property name="toolTip">
-        <string>Adresse</string>
-       </property>
-       <property name="text">
-        <string>Adresse</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_2">
-       <property name="geometry">
-        <rect>
-         <x>470</x>
-         <y>50</y>
-         <width>191</width>
-         <height>22</height>
-        </rect>
-       </property>
-       <property name="toolTip">
-        <string>Envoyé par</string>
-       </property>
-       <property name="text">
-        <string>Envoyé par :</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_3">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>140</y>
-         <width>171</width>
-         <height>22</height>
-        </rect>
-       </property>
-       <property name="toolTip">
-        <string>Tél privé</string>
-       </property>
-       <property name="text">
-        <string>Tel privé</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_7">
-       <property name="geometry">
-        <rect>
-         <x>250</x>
-         <y>140</y>
-         <width>181</width>
-         <height>22</height>
-        </rect>
-       </property>
-       <property name="toolTip">
-        <string>Portable</string>
-       </property>
-       <property name="text">
-        <string>Portable</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_8">
-       <property name="geometry">
-        <rect>
-         <x>470</x>
-         <y>140</y>
-         <width>191</width>
-         <height>22</height>
-        </rect>
-       </property>
-       <property name="toolTip">
-        <string>Assurance</string>
-       </property>
-       <property name="text">
-        <string>Assurance</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_9">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>170</y>
-         <width>171</width>
-         <height>22</height>
-        </rect>
-       </property>
-       <property name="toolTip">
-        <string>Profession</string>
-       </property>
-       <property name="inputMask">
-        <string/>
-       </property>
-       <property name="text">
-        <string>Profession</string>
-       </property>
-      </widget>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QScrollArea" name="scrollArea">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>626</width>
+            <height>307</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <layout class="QGridLayout" name="gridLayout_2">
+             <item row="0" column="0">
+              <widget class="QLineEdit" name="lineEdit_4">
+               <property name="toolTip">
+                <string>NOM</string>
+               </property>
+               <property name="inputMask">
+                <string/>
+               </property>
+               <property name="text">
+                <string>NOM</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="lineEdit_5">
+               <property name="toolTip">
+                <string>Prénom</string>
+               </property>
+               <property name="inputMask">
+                <string/>
+               </property>
+               <property name="text">
+                <string>Prénom</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QLineEdit" name="lineEdit_6">
+               <property name="toolTip">
+                <string>Date de naissance</string>
+               </property>
+               <property name="inputMask">
+                <string/>
+               </property>
+               <property name="text">
+                <string>Date de naissance</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QLineEdit" name="lineEdit_2">
+               <property name="toolTip">
+                <string>Envoyé par</string>
+               </property>
+               <property name="text">
+                <string>Envoyé par :</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLineEdit" name="lineEdit_3">
+               <property name="toolTip">
+                <string>Tél privé</string>
+               </property>
+               <property name="text">
+                <string>Tel privé</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QLineEdit" name="lineEdit_7">
+               <property name="toolTip">
+                <string>Portable</string>
+               </property>
+               <property name="text">
+                <string>Portable</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="2">
+              <widget class="QLineEdit" name="lineEdit_8">
+               <property name="toolTip">
+                <string>Assurance</string>
+               </property>
+               <property name="text">
+                <string>Assurance</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="2">
+              <widget class="QLineEdit" name="lineEdit_9">
+               <property name="toolTip">
+                <string>Profession</string>
+               </property>
+               <property name="inputMask">
+                <string/>
+               </property>
+               <property name="text">
+                <string>Profession</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0" rowspan="2" colspan="2">
+              <widget class="QTextEdit" name="textEdit"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
      </widget>
      <widget class="QWidget" name="anamn">
       <attribute name="title">
@@ -424,7 +385,7 @@
       <widget class="QLineEdit" name="lineEdit_18">
        <property name="geometry">
         <rect>
-         <x>70</x>
+         <x>80</x>
          <y>230</y>
          <width>113</width>
          <height>22</height>
@@ -541,9 +502,9 @@
       <widget class="QLineEdit" name="lineEdit_20">
        <property name="geometry">
         <rect>
-         <x>110</x>
+         <x>120</x>
          <y>310</y>
-         <width>181</width>
+         <width>171</width>
          <height>22</height>
         </rect>
        </property>
@@ -551,9 +512,9 @@
       <widget class="QLineEdit" name="lineEdit_21">
        <property name="geometry">
         <rect>
-         <x>140</x>
+         <x>150</x>
          <y>340</y>
-         <width>151</width>
+         <width>141</width>
          <height>22</height>
         </rect>
        </property>
@@ -571,9 +532,9 @@
       <widget class="QLineEdit" name="lineEdit_23">
        <property name="geometry">
         <rect>
-         <x>360</x>
+         <x>370</x>
          <y>310</y>
-         <width>281</width>
+         <width>271</width>
          <height>22</height>
         </rect>
        </property>
@@ -675,21 +636,14 @@
       <widget class="QLineEdit" name="lineEdit_27">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>170</x>
          <y>450</y>
-         <width>481</width>
+         <width>471</width>
          <height>22</height>
         </rect>
        </property>
       </widget>
      </widget>
-    </widget>
-   </item>
-   <item row="0" column="2">
-    <widget class="QScrollBar" name="verticalScrollBar">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
     </widget>
    </item>
   </layout>
