@@ -10,7 +10,7 @@ FormPacientsSheets::FormPacientsSheets(QWidget *parent) :
     _pacientScene = new PacientScene(this);
     ui->graphicsView->setScene(_pacientScene);
 
-    ui->tableWidget->setHorizontalHeaderLabels(QStringList() << "Date" << "Treatment" << "Payment mode");
+//    ui->tableWidget->setHorizontalHeaderLabels(QStringList() << "Date" << "Treatment" << "Payment mode");
 }
 
 FormPacientsSheets::~FormPacientsSheets()

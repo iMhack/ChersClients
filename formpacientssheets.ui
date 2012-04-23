@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Butters</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="data.qrc">
+    <normaloff>:/images/butters.png</normaloff>:/images/butters.png</iconset>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
@@ -25,42 +29,88 @@
       </attribute>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
-        <layout class="QFormLayout" name="formLayout">
-         <item row="0" column="0">
-          <widget class="QLabel" name="nameLabel">
-           <property name="text">
-            <string>Name</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLineEdit" name="nameLineEdit"/>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="firstNameLabel">
-           <property name="text">
-            <string>First name</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QLineEdit" name="firstNameLineEdit"/>
-         </item>
-        </layout>
+        <widget class="QScrollArea" name="scrollArea">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>299</width>
+            <height>302</height>
+           </rect>
+          </property>
+          <layout class="QFormLayout" name="formLayout_2">
+           <item row="0" column="0">
+            <widget class="QLabel" name="nameLabel">
+             <property name="text">
+              <string>Name</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="nameLineEdit"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="firstNameLabel">
+             <property name="text">
+              <string>First name</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="firstNameLineEdit"/>
+           </item>
+          </layout>
+         </widget>
+        </widget>
        </item>
        <item>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
           <widget class="QTableWidget" name="tableWidget">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectRows</enum>
+           </property>
            <property name="rowCount">
-            <number>0</number>
+            <number>1</number>
            </property>
            <property name="columnCount">
-            <number>3</number>
+            <number>2</number>
            </property>
-           <column/>
-           <column/>
-           <column/>
+           <row>
+            <property name="text">
+             <string>15.01.2012</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>Treatment</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Payment mode</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string>Nulla imperdiet porta diam, ut tristique arcu accumsan nec. Aliquam sit amet viverra odio. Donec a ante ac sem tempus auctor eget et ipsum. Mauris porta mi in risus tristique vulputate laoreet risus venenatis. Vestibulum vel mauris ipsum. Cras sed quam vel nisl vestibulum tristique. Vestibulum sodales gravida ornare. Quisque sed eros id mi fermentum ultrices vitae non metus. Sed blandit pretium consectetur.</string>
+            </property>
+           </item>
+           <item row="0" column="1">
+            <property name="text">
+             <string>VBR</string>
+            </property>
+           </item>
           </widget>
          </item>
          <item>
@@ -92,6 +142,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="data.qrc"/>
+ </resources>
  <connections/>
 </ui>

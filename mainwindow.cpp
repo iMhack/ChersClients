@@ -9,8 +9,17 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
-    QToolBar *toolbar = new QToolBar(this);
+    QMenu *mainmenu = new QMenu("Start", this);
+    QAction *aOpen = mainmenu->addAction(QIcon(":/images/butters.png"), "Open customer record...", this, SLOT(actionOpenClient()));
+    QAction *aNew = mainmenu->addAction(QIcon(":/images/butters2.png"), "New customer record...", this, SLOT(actionNewClient()));
+    QAction *aVbr = mainmenu->addAction(QIcon(":/images/money.png"), "VBR Overview", this, SLOT(actionOpenVBROverview()));
+    menuBar()->addMenu(mainmenu);
+
     QPixmap pix(":/images/undo.png");
+    QToolBar *toolbar = new QToolBar(this);
+    toolbar->addAction(aOpen);
+    toolbar->addAction(aNew);
+    toolbar->addAction(aVbr);
     undoAction = toolbar->addAction(QIcon(pix),
                                     "undo", this, SLOT(actionUndo()));
     undoAction->setEnabled(false);
@@ -19,11 +28,7 @@ MainWindow::MainWindow(QWidget *parent)
     redoAction->setEnabled(false);
     addToolBar(toolbar);
 
-    QMenu *mainmenu = new QMenu("Start", this);
-    mainmenu->addAction(QIcon(":/images/butters.png"), "Open customer record...", this, SLOT(actionOpenClient()));
-    mainmenu->addAction(QIcon(":/images/butters.png"), "New customer record...", this, SLOT(actionNewClient()));
-    mainmenu->addAction(QIcon(":/images/butters.png"), "VBR Overview", this, SLOT(actionOpenVBROverview()));
-    menuBar()->addMenu(mainmenu);
+
 
     _mdiArea = new QMdiArea(this);
     setCentralWidget(_mdiArea);
