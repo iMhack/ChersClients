@@ -12,3 +12,15 @@ Bac_a_sable::~Bac_a_sable()
 {
     delete ui;
 }
+
+#include <QApplication>
+
+int main(int argc, char *argv[])
+{
+    QApplication app(argc, argv);
+
+    Bac_a_sable w;
+    w.show();
+
+    return app.exec();
+}
