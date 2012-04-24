@@ -76,8 +76,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>681</width>
-            <height>1162</height>
+            <width>667</width>
+            <height>1120</height>
            </rect>
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -184,8 +184,8 @@
                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Lucida Grande'; font-size:13pt;&quot;&gt;Adresse&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Lucida Grande'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Adresse&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
               </widget>
              </item>
@@ -212,8 +212,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>663</width>
-            <height>1177</height>
+            <width>652</width>
+            <height>1190</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -235,15 +235,24 @@ p, li { white-space: pre-wrap; }
               <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;title&gt;Motif de consultation&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Lucida Grande'; font-size:13pt;&quot;&gt;Motif de consultation&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Lucida Grande'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Motif de consultation&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
            </item>
            <item>
             <widget class="QGroupBox" name="groupBox">
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
              <property name="title">
               <string>Anamnèse</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
              </property>
              <layout class="QFormLayout" name="formLayout">
               <item row="0" column="0">
@@ -352,6 +361,12 @@ p, li { white-space: pre-wrap; }
            </item>
            <item>
             <widget class="QGroupBox" name="groupBox_2">
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
              <property name="title">
               <string>Habitudes</string>
              </property>
@@ -429,6 +444,12 @@ p, li { white-space: pre-wrap; }
            </item>
            <item>
             <widget class="QGroupBox" name="groupBox_3">
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
              <property name="title">
               <string>Antécédents personnels</string>
              </property>
@@ -441,7 +462,7 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item row="0" column="1">
-               <widget class="QLineEdit" name="AntecedentsPersoTrauma"/>
+               <widget class="QLineEdit" name="antecedentsPersoTrauma"/>
               </item>
               <item row="1" column="0">
                <widget class="QLabel" name="label_20">
@@ -451,7 +472,7 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item row="1" column="1">
-               <widget class="QLineEdit" name="AntecedentsPersoOperation"/>
+               <widget class="QLineEdit" name="antecedentsPersoOperation"/>
               </item>
              </layout>
             </widget>
@@ -472,12 +493,18 @@ p, li { white-space: pre-wrap; }
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="AntecedentsFamiliaux"/>
+              <widget class="QLineEdit" name="antecedentsFamiliaux"/>
              </item>
             </layout>
            </item>
            <item>
             <widget class="QGroupBox" name="groupBox_4">
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
              <property name="title">
               <string>Anamnèse systémique</string>
              </property>
@@ -691,8 +718,15 @@ p, li { white-space: pre-wrap; }
   </layout>
  </widget>
  <tabstops>
-  <tabstop>tabWidget</tabstop>
-  <tabstop>scrollArea_2</tabstop>
+  <tabstop>lastName</tabstop>
+  <tabstop>firstName</tabstop>
+  <tabstop>dateOfBirth</tabstop>
+  <tabstop>adress</tabstop>
+  <tabstop>sentBy</tabstop>
+  <tabstop>profess</tabstop>
+  <tabstop>telNumPriv</tabstop>
+  <tabstop>telNumPort</tabstop>
+  <tabstop>assurance</tabstop>
   <tabstop>MotifDeConsult</tabstop>
   <tabstop>anamnSiege</tabstop>
   <tabstop>anamnIrradiation</tabstop>
@@ -708,9 +742,11 @@ p, li { white-space: pre-wrap; }
   <tabstop>habitudesAlcool</tabstop>
   <tabstop>habitudesNutrition</tabstop>
   <tabstop>habitudesSport</tabstop>
-  <tabstop>AntecedentsPersoTrauma</tabstop>
-  <tabstop>AntecedentsPersoOperation</tabstop>
-  <tabstop>AntecedentsFamiliaux</tabstop>
+  <tabstop>antecedentsPersoTrauma</tabstop>
+  <tabstop>antecedentsPersoOperation</tabstop>
+  <tabstop>antecedentsFamiliaux</tabstop>
+  <tabstop>anameseSysteEtatGeneral</tabstop>
+  <tabstop>anameseSysteFatigue</tabstop>
   <tabstop>anameseSysteTaille</tabstop>
   <tabstop>anameseSystePoids</tabstop>
   <tabstop>anameseSysteTemperature</tabstop>
@@ -724,19 +760,12 @@ p, li { white-space: pre-wrap; }
   <tabstop>anameseSysteTete</tabstop>
   <tabstop>anameseSysteVisionVertiges</tabstop>
   <tabstop>Examens</tabstop>
-  <tabstop>anameseSysteFatigue</tabstop>
-  <tabstop>ExtraTitre</tabstop>
-  <tabstop>ExtraContenu</tabstop>
-  <tabstop>adress</tabstop>
   <tabstop>scrollArea</tabstop>
-  <tabstop>lastName</tabstop>
-  <tabstop>dateOfBirth</tabstop>
-  <tabstop>telNumPort</tabstop>
-  <tabstop>telNumPriv</tabstop>
-  <tabstop>profess</tabstop>
-  <tabstop>firstName</tabstop>
-  <tabstop>sentBy</tabstop>
-  <tabstop>assurance</tabstop>
+  <tabstop>buttonBox</tabstop>
+  <tabstop>ExtraTitre</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>scrollArea_2</tabstop>
+  <tabstop>ExtraContenu</tabstop>
  </tabstops>
  <resources/>
  <connections/>
