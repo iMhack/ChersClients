@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>Bac_a_sable</class>
- <widget class="QDialog" name="Bac_a_sable">
+ <widget class="QWidget" name="Bac_a_sable">
   <property name="windowModality">
    <enum>Qt::WindowModal</enum>
   </property>
@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>637</width>
-    <height>451</height>
+    <width>723</width>
+    <height>1233</height>
    </rect>
   </property>
   <property name="baseSize">
@@ -76,8 +76,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>581</width>
-            <height>378</height>
+            <width>681</width>
+            <height>1162</height>
            </rect>
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -184,8 +184,8 @@
                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Lucida Grande'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Adresse&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Lucida Grande'; font-size:13pt;&quot;&gt;Adresse&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
               </widget>
              </item>
@@ -201,11 +201,8 @@ p, li { white-space: pre-wrap; }
       <attribute name="title">
        <string>Anamnèse</string>
       </attribute>
-      <layout class="QGridLayout" name="gridLayout_4">
-       <property name="sizeConstraint">
-        <enum>QLayout::SetNoConstraint</enum>
-       </property>
-       <item row="3" column="17">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
         <widget class="QScrollArea" name="scrollArea_2">
          <property name="widgetResizable">
           <bool>true</bool>
@@ -214,13 +211,13 @@ p, li { white-space: pre-wrap; }
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>-631</y>
-            <width>566</width>
-            <height>1030</height>
+            <y>0</y>
+            <width>663</width>
+            <height>1177</height>
            </rect>
           </property>
-          <layout class="QGridLayout" name="gridLayout_3">
-           <item row="0" column="0" colspan="18">
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
             <widget class="QTextEdit" name="MotifDeConsult">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -238,430 +235,443 @@ p, li { white-space: pre-wrap; }
               <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;title&gt;Motif de consultation&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Lucida Grande'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Motif de consultation&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Lucida Grande'; font-size:13pt;&quot;&gt;Motif de consultation&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
            </item>
-           <item row="1" column="0" colspan="4">
-            <widget class="QLabel" name="label">
-             <property name="font">
-              <font>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
+           <item>
+            <widget class="QGroupBox" name="groupBox">
+             <property name="title">
               <string>Anamnèse</string>
              </property>
-             <property name="textFormat">
-              <enum>Qt::AutoText</enum>
-             </property>
-             <property name="wordWrap">
-              <bool>false</bool>
-             </property>
+             <layout class="QFormLayout" name="formLayout">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_2">
+                <property name="text">
+                 <string>Siège</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="anamnSiege"/>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_3">
+                <property name="text">
+                 <string>Irradiation</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="anamnIrradiation"/>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_4">
+                <property name="text">
+                 <string>Qualité</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="anamnQualite"/>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_5">
+                <property name="text">
+                 <string>Intensité</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLineEdit" name="anamnIntensite"/>
+              </item>
+             </layout>
             </widget>
            </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="label_2">
-             <property name="text">
-              <string>Siège</string>
-             </property>
-            </widget>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QLabel" name="label_6">
+               <property name="text">
+                <string>Chronologie :</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_7">
+               <property name="text">
+                <string>Début</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="anamnDebut"/>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_8">
+               <property name="text">
+                <string>Durée</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="anamnDuree"/>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_9">
+               <property name="text">
+                <string>Fréquence</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="anamnFrequence"/>
+             </item>
+            </layout>
            </item>
-           <item row="2" column="1" colspan="13">
-            <widget class="QLineEdit" name="anamnSiege"/>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QLabel" name="label_10">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Allérgies</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="allergies"/>
+             </item>
+            </layout>
            </item>
-           <item row="3" column="0" colspan="4">
-            <widget class="QLabel" name="label_3">
-             <property name="text">
-              <string>Irradiation</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="5" colspan="9">
-            <widget class="QLineEdit" name="anamnIrradiation"/>
-           </item>
-           <item row="4" column="0" colspan="3">
-            <widget class="QLabel" name="label_4">
-             <property name="text">
-              <string>Qualité</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="3" colspan="11">
-            <widget class="QLineEdit" name="anamnQualite"/>
-           </item>
-           <item row="5" column="0" colspan="4">
-            <widget class="QLabel" name="label_5">
-             <property name="text">
-              <string>Intensité</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="4" colspan="10">
-            <widget class="QLineEdit" name="anamnIntensite"/>
-           </item>
-           <item row="6" column="0" colspan="7">
-            <widget class="QLabel" name="label_6">
-             <property name="text">
-              <string>Chronologie :</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="8" colspan="3">
-            <widget class="QLabel" name="label_7">
-             <property name="text">
-              <string>Début</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="11">
-            <widget class="QLineEdit" name="anamnDebut"/>
-           </item>
-           <item row="6" column="12">
-            <widget class="QLabel" name="label_8">
-             <property name="text">
-              <string>Durée</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="13">
-            <widget class="QLineEdit" name="anamnDuree"/>
-           </item>
-           <item row="6" column="14" colspan="2">
-            <widget class="QLabel" name="label_9">
-             <property name="text">
-              <string>Fréquence</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="16" colspan="2">
-            <widget class="QLineEdit" name="anamnFrequence"/>
-           </item>
-           <item row="7" column="0" colspan="3">
-            <widget class="QLabel" name="label_10">
-             <property name="font">
-              <font>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
-              <string>Allérgies</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="4" colspan="14">
-            <widget class="QLineEdit" name="allergies"/>
-           </item>
-           <item row="8" column="0" colspan="4">
-            <widget class="QLabel" name="label_11">
-             <property name="font">
-              <font>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
+           <item>
+            <widget class="QGroupBox" name="groupBox_2">
+             <property name="title">
               <string>Habitudes</string>
              </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item>
+               <layout class="QFormLayout" name="formLayout_2">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_12">
+                  <property name="text">
+                   <string>Tabac</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="habitudesTabac"/>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_13">
+                  <property name="text">
+                   <string>Médicaments</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLineEdit" name="habitudesMedic"/>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="label_14">
+                  <property name="text">
+                   <string>Position de travail</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QLineEdit" name="habitudesPositionDeTravail"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QFormLayout" name="formLayout_3">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_15">
+                  <property name="text">
+                   <string>Alcool</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="habitudesAlcool"/>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_16">
+                  <property name="text">
+                   <string>Nutrition</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLineEdit" name="habitudesNutrition"/>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="label_17">
+                  <property name="text">
+                   <string>Sport</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QLineEdit" name="habitudesSport"/>
+                </item>
+               </layout>
+              </item>
+             </layout>
             </widget>
            </item>
-           <item row="9" column="0">
-            <widget class="QLabel" name="label_12">
-             <property name="text">
-              <string>Tabac</string>
-             </property>
-            </widget>
-           </item>
-           <item row="9" column="2" colspan="10">
-            <widget class="QLineEdit" name="habitudesTabac"/>
-           </item>
-           <item row="9" column="12">
-            <widget class="QLabel" name="label_15">
-             <property name="text">
-              <string>Alcool</string>
-             </property>
-            </widget>
-           </item>
-           <item row="9" column="14" colspan="4">
-            <widget class="QLineEdit" name="habitudesAlcool"/>
-           </item>
-           <item row="10" column="0" colspan="6">
-            <widget class="QLabel" name="label_13">
-             <property name="text">
-              <string>Médicaments</string>
-             </property>
-            </widget>
-           </item>
-           <item row="10" column="6" colspan="6">
-            <widget class="QLineEdit" name="habitudesMedic"/>
-           </item>
-           <item row="10" column="12" colspan="2">
-            <widget class="QLabel" name="label_16">
-             <property name="text">
-              <string>Nutrition</string>
-             </property>
-            </widget>
-           </item>
-           <item row="10" column="14" colspan="4">
-            <widget class="QLineEdit" name="habitudesNutrition"/>
-           </item>
-           <item row="11" column="0" colspan="8">
-            <widget class="QLabel" name="label_14">
-             <property name="text">
-              <string>Position de travail</string>
-             </property>
-            </widget>
-           </item>
-           <item row="11" column="8" colspan="4">
-            <widget class="QLineEdit" name="habitudesPositionDeTravail"/>
-           </item>
-           <item row="11" column="12">
-            <widget class="QLabel" name="label_17">
-             <property name="text">
-              <string>Sport</string>
-             </property>
-            </widget>
-           </item>
-           <item row="11" column="14" colspan="4">
-            <widget class="QLineEdit" name="habitudesSport"/>
-           </item>
-           <item row="12" column="0" colspan="11">
-            <widget class="QLabel" name="label_18">
-             <property name="font">
-              <font>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
+           <item>
+            <widget class="QGroupBox" name="groupBox_3">
+             <property name="title">
               <string>Antécédents personnels</string>
              </property>
+             <layout class="QFormLayout" name="formLayout_4">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_19">
+                <property name="text">
+                 <string>Trauma</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="AntecedentsPersoTrauma"/>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_20">
+                <property name="text">
+                 <string>Opération</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="AntecedentsPersoOperation"/>
+              </item>
+             </layout>
             </widget>
            </item>
-           <item row="13" column="0" colspan="3">
-            <widget class="QLabel" name="label_19">
-             <property name="text">
-              <string>Trauma</string>
-             </property>
-            </widget>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <widget class="QLabel" name="label_21">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Antécédants familiaux</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="AntecedentsFamiliaux"/>
+             </item>
+            </layout>
            </item>
-           <item row="13" column="3" colspan="11">
-            <widget class="QLineEdit" name="AntecedentsPersoTrauma"/>
-           </item>
-           <item row="14" column="0" colspan="4">
-            <widget class="QLabel" name="label_20">
-             <property name="text">
-              <string>Opération</string>
-             </property>
-            </widget>
-           </item>
-           <item row="14" column="5" colspan="9">
-            <widget class="QLineEdit" name="AntecedentsPersoOperation"/>
-           </item>
-           <item row="15" column="0" colspan="9">
-            <widget class="QLabel" name="label_21">
-             <property name="font">
-              <font>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
-              <string>Antécédants familiaux</string>
-             </property>
-            </widget>
-           </item>
-           <item row="15" column="10" colspan="4">
-            <widget class="QLineEdit" name="AntecedentsFamiliaux"/>
-           </item>
-           <item row="16" column="0" colspan="10">
-            <widget class="QLabel" name="label_22">
-             <property name="font">
-              <font>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
+           <item>
+            <widget class="QGroupBox" name="groupBox_4">
+             <property name="title">
               <string>Anamnèse systémique</string>
              </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_8">
+              <item>
+               <layout class="QFormLayout" name="formLayout_5">
+                <property name="fieldGrowthPolicy">
+                 <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                </property>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_24">
+                  <property name="text">
+                   <string>Taille</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLineEdit" name="anameseSysteTaille"/>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="label_25">
+                  <property name="text">
+                   <string>Poids</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QLineEdit" name="anameseSystePoids"/>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="label_27">
+                  <property name="text">
+                   <string>Température</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QLineEdit" name="anameseSysteTemperature"/>
+                </item>
+                <item row="5" column="0">
+                 <widget class="QLabel" name="label_28">
+                  <property name="text">
+                   <string>Digestif</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="1">
+                 <widget class="QLineEdit" name="anameseSysteDigestif"/>
+                </item>
+                <item row="6" column="0">
+                 <widget class="QLabel" name="label_29">
+                  <property name="text">
+                   <string>O.R.L.</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="6" column="1">
+                 <widget class="QLineEdit" name="anameseSysteORL"/>
+                </item>
+                <item row="7" column="0">
+                 <widget class="QLabel" name="label_30">
+                  <property name="text">
+                   <string>Pulm</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="1">
+                 <widget class="QLineEdit" name="anameseSystePulm"/>
+                </item>
+                <item row="8" column="0">
+                 <widget class="QLabel" name="label_31">
+                  <property name="text">
+                   <string>Cardio-vasc</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="8" column="1">
+                 <widget class="QLineEdit" name="anameseSysteCardioVasc"/>
+                </item>
+                <item row="9" column="0">
+                 <widget class="QLabel" name="label_32">
+                  <property name="text">
+                   <string>Uro-génital</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="9" column="1">
+                 <widget class="QLineEdit" name="anameseSysteUroGenital"/>
+                </item>
+                <item row="10" column="0">
+                 <widget class="QLabel" name="label_33">
+                  <property name="text">
+                   <string>Endocrinien</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="10" column="1">
+                 <widget class="QLineEdit" name="anameseSysteEndocrinien"/>
+                </item>
+                <item row="11" column="0">
+                 <widget class="QLabel" name="label_34">
+                  <property name="text">
+                   <string>Musculo-squeletique</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="11" column="1">
+                 <widget class="QLineEdit" name="anameseSysteMuscSquelet"/>
+                </item>
+                <item row="12" column="0">
+                 <widget class="QLabel" name="label_35">
+                  <property name="text">
+                   <string>Tête</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="12" column="1">
+                 <widget class="QLineEdit" name="anameseSysteTete"/>
+                </item>
+                <item row="13" column="0">
+                 <widget class="QLabel" name="label_36">
+                  <property name="text">
+                   <string>Vision - Vertiges</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="13" column="1">
+                 <widget class="QLineEdit" name="anameseSysteVisionVertiges"/>
+                </item>
+                <item row="14" column="0">
+                 <widget class="QLabel" name="label_37">
+                  <property name="font">
+                   <font>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Examens</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="14" column="1">
+                 <widget class="QTextEdit" name="Examens"/>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_23">
+                  <property name="text">
+                   <string>Etat général</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="anameseSysteEtatGeneral"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_7">
+                  <item>
+                   <widget class="QLabel" name="label_26">
+                    <property name="text">
+                     <string>Fatigue</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="anameseSysteFatigue"/>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="ExtraTitre">
+                  <property name="toolTip">
+                   <string>Titre du contenu ci-dessous</string>
+                  </property>
+                  <property name="text">
+                   <string>Autre</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QTextEdit" name="ExtraContenu">
+                  <property name="toolTip">
+                   <string>Contenu du label &quot;Autre&quot;</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
             </widget>
-           </item>
-           <item row="17" column="0" colspan="5">
-            <widget class="QLabel" name="label_23">
-             <property name="text">
-              <string>Etat général</string>
-             </property>
-            </widget>
-           </item>
-           <item row="17" column="6" colspan="8">
-            <widget class="QLineEdit" name="anameseSysteEtatGeneral"/>
-           </item>
-           <item row="17" column="14">
-            <widget class="QLabel" name="label_26">
-             <property name="text">
-              <string>Fatigue</string>
-             </property>
-            </widget>
-           </item>
-           <item row="17" column="15" colspan="3">
-            <widget class="QLineEdit" name="anameseSysteFatigue"/>
-           </item>
-           <item row="18" column="0" colspan="2">
-            <widget class="QLabel" name="label_24">
-             <property name="text">
-              <string>Taille</string>
-             </property>
-            </widget>
-           </item>
-           <item row="18" column="2" colspan="9">
-            <widget class="QLineEdit" name="anameseSysteTaille"/>
-           </item>
-           <item row="18" column="11">
-            <widget class="QLabel" name="label_25">
-             <property name="text">
-              <string>Poids</string>
-             </property>
-            </widget>
-           </item>
-           <item row="18" column="12" colspan="2">
-            <widget class="QLineEdit" name="anameseSystePoids"/>
-           </item>
-           <item row="18" column="14" colspan="3">
-            <widget class="QLabel" name="label_27">
-             <property name="text">
-              <string>Température</string>
-             </property>
-            </widget>
-           </item>
-           <item row="18" column="17">
-            <widget class="QLineEdit" name="anameseSysteTemperature"/>
-           </item>
-           <item row="19" column="0" colspan="4">
-            <widget class="QLabel" name="label_28">
-             <property name="text">
-              <string>Digestif</string>
-             </property>
-            </widget>
-           </item>
-           <item row="19" column="4" colspan="10">
-            <widget class="QLineEdit" name="anameseSysteDigestif"/>
-           </item>
-           <item row="19" column="14" colspan="4">
-            <widget class="QLineEdit" name="ExtraTitre">
-             <property name="toolTip">
-              <string>Titre du contenu ci-dessous</string>
-             </property>
-             <property name="text">
-              <string>Autre</string>
-             </property>
-            </widget>
-           </item>
-           <item row="20" column="0" colspan="4">
-            <widget class="QLabel" name="label_29">
-             <property name="text">
-              <string>O.R.L.</string>
-             </property>
-            </widget>
-           </item>
-           <item row="20" column="5" colspan="9">
-            <widget class="QLineEdit" name="anameseSysteORL"/>
-           </item>
-           <item row="20" column="14" rowspan="9" colspan="4">
-            <widget class="QTextEdit" name="ExtraContenu">
-             <property name="toolTip">
-              <string>Contenu du label &quot;Autre&quot;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="21" column="0" colspan="4">
-            <widget class="QLabel" name="label_30">
-             <property name="text">
-              <string>Pulm</string>
-             </property>
-            </widget>
-           </item>
-           <item row="21" column="5" colspan="9">
-            <widget class="QLineEdit" name="anameseSystePulm"/>
-           </item>
-           <item row="22" column="0" colspan="5">
-            <widget class="QLabel" name="label_31">
-             <property name="text">
-              <string>Cardio-vasc</string>
-             </property>
-            </widget>
-           </item>
-           <item row="22" column="6" colspan="8">
-            <widget class="QLineEdit" name="anameseSysteCardioVasc"/>
-           </item>
-           <item row="23" column="0" colspan="5">
-            <widget class="QLabel" name="label_32">
-             <property name="text">
-              <string>Uro-génital</string>
-             </property>
-            </widget>
-           </item>
-           <item row="23" column="6" colspan="8">
-            <widget class="QLineEdit" name="anameseSysteUroGenital"/>
-           </item>
-           <item row="24" column="0" colspan="5">
-            <widget class="QLabel" name="label_33">
-             <property name="text">
-              <string>Endocrinien</string>
-             </property>
-            </widget>
-           </item>
-           <item row="24" column="6" colspan="8">
-            <widget class="QLineEdit" name="anameseSysteEndocrinien"/>
-           </item>
-           <item row="25" column="0" colspan="9">
-            <widget class="QLabel" name="label_34">
-             <property name="text">
-              <string>Musculo-squeletique</string>
-             </property>
-            </widget>
-           </item>
-           <item row="25" column="9" colspan="5">
-            <widget class="QLineEdit" name="anameseSysteMuscSquelet"/>
-           </item>
-           <item row="26" column="0">
-            <widget class="QLabel" name="label_35">
-             <property name="text">
-              <string>Tête</string>
-             </property>
-            </widget>
-           </item>
-           <item row="26" column="1" colspan="13">
-            <widget class="QLineEdit" name="anameseSysteTete"/>
-           </item>
-           <item row="27" column="0" colspan="7">
-            <widget class="QLabel" name="label_36">
-             <property name="text">
-              <string>Vision - Vertiges</string>
-             </property>
-            </widget>
-           </item>
-           <item row="27" column="7" colspan="7">
-            <widget class="QLineEdit" name="anameseSysteVisionVertiges"/>
-           </item>
-           <item row="28" column="0" colspan="4">
-            <widget class="QLabel" name="label_37">
-             <property name="font">
-              <font>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
-              <string>Examens</string>
-             </property>
-            </widget>
-           </item>
-           <item row="28" column="4" colspan="10">
-            <widget class="QTextEdit" name="Examens"/>
            </item>
           </layout>
          </widget>
@@ -671,8 +681,63 @@ p, li { white-space: pre-wrap; }
      </widget>
     </widget>
    </item>
+   <item row="1" column="0">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>scrollArea_2</tabstop>
+  <tabstop>MotifDeConsult</tabstop>
+  <tabstop>anamnSiege</tabstop>
+  <tabstop>anamnIrradiation</tabstop>
+  <tabstop>anamnQualite</tabstop>
+  <tabstop>anamnIntensite</tabstop>
+  <tabstop>anamnDebut</tabstop>
+  <tabstop>anamnDuree</tabstop>
+  <tabstop>anamnFrequence</tabstop>
+  <tabstop>allergies</tabstop>
+  <tabstop>habitudesTabac</tabstop>
+  <tabstop>habitudesMedic</tabstop>
+  <tabstop>habitudesPositionDeTravail</tabstop>
+  <tabstop>habitudesAlcool</tabstop>
+  <tabstop>habitudesNutrition</tabstop>
+  <tabstop>habitudesSport</tabstop>
+  <tabstop>AntecedentsPersoTrauma</tabstop>
+  <tabstop>AntecedentsPersoOperation</tabstop>
+  <tabstop>AntecedentsFamiliaux</tabstop>
+  <tabstop>anameseSysteTaille</tabstop>
+  <tabstop>anameseSystePoids</tabstop>
+  <tabstop>anameseSysteTemperature</tabstop>
+  <tabstop>anameseSysteDigestif</tabstop>
+  <tabstop>anameseSysteORL</tabstop>
+  <tabstop>anameseSystePulm</tabstop>
+  <tabstop>anameseSysteCardioVasc</tabstop>
+  <tabstop>anameseSysteUroGenital</tabstop>
+  <tabstop>anameseSysteEndocrinien</tabstop>
+  <tabstop>anameseSysteMuscSquelet</tabstop>
+  <tabstop>anameseSysteTete</tabstop>
+  <tabstop>anameseSysteVisionVertiges</tabstop>
+  <tabstop>Examens</tabstop>
+  <tabstop>anameseSysteFatigue</tabstop>
+  <tabstop>ExtraTitre</tabstop>
+  <tabstop>ExtraContenu</tabstop>
+  <tabstop>adress</tabstop>
+  <tabstop>scrollArea</tabstop>
+  <tabstop>lastName</tabstop>
+  <tabstop>dateOfBirth</tabstop>
+  <tabstop>telNumPort</tabstop>
+  <tabstop>telNumPriv</tabstop>
+  <tabstop>profess</tabstop>
+  <tabstop>firstName</tabstop>
+  <tabstop>sentBy</tabstop>
+  <tabstop>assurance</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

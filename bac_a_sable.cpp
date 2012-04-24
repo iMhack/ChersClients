@@ -1,16 +1,24 @@
 #include "bac_a_sable.h"
 #include "ui_bac_a_sable.h"
+#include <QDebug>
 
 Bac_a_sable::Bac_a_sable(QWidget *parent) :
-    QDialog(parent),
+    QWidget(parent),
     ui(new Ui::Bac_a_sable)
 {
     ui->setupUi(this);
+    connect(ui->buttonBox, SIGNAL(accepted()), this, SLOT(onACliqueSurOk()));
 }
 
 Bac_a_sable::~Bac_a_sable()
 {
     delete ui;
+}
+
+void Bac_a_sable::onACliqueSurOk()
+{
+    qDebug() << ui->anameseSysteCardioVasc->text();
+    close();
 }
 
 #include <QApplication>
