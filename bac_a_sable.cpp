@@ -10,19 +10,25 @@
 #include <QTableView>
 #include <QSqlRelationalTableModel>
 #include <QSettings>
+#include <QWidget>
 
 
-Bac_a_sable::Bac_a_sable(QWidget *parent) :
+
+Bac_a_sable::Bac_a_sable(QWidget *parent, int id) :
     QWidget(parent),
     ui(new Ui::Bac_a_sable)
 {
     ui->setupUi(this);
-    qDebug() << "bac a sable cree";
+    qDebug() << "bac a sable surcharged cree, id :"<< id;
     connect(ui->buttonBox, SIGNAL(accepted()), this, SLOT(onACliqueSurOk()));
     connect(ui->buttonBox, SIGNAL(rejected()), this, SLOT(noClick()));
-
-
+    //this->setWindowTitle("Modifier client");
+    if(id>0)//On remplis les champs avec les valeurs liées à l'ID
+    {
+        ui->adress->setText("ID>0 !!");
+    }
 }
+
 
 Bac_a_sable::~Bac_a_sable()
 {
@@ -45,7 +51,7 @@ void Bac_a_sable::onACliqueSurOk()
 
     //On rajoute les valeurs du formulaire dans la DB
     if(ok){
-        qDebug() << "db.open true";
+        qDebug() << "db.open() true";
         QSqlQuery query(db);
         //Ajout des valeurs du formulaire dans la DB
         query.exec("CREATE TABLE "+(settings.value("DBname").toString())
@@ -116,10 +122,12 @@ void Bac_a_sable::onACliqueSurOk()
         query.addBindValue(ui->extraTitre->text());
         query.addBindValue(ui->extraContenu->toPlainText());
 
-        qDebug() << "query exec " << query.exec();
+        qDebug() << "query.exec() " << query.exec();
+
+        query.finish();
     }
     else{
-        qDebug() << "db.open false";
+        qDebug() << "db.open() false";
         QMessageBox::critical(0, "Error", db.lastError().text());
     }
     db.close();

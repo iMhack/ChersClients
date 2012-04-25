@@ -12,12 +12,9 @@ class Bac_a_sable : public QWidget
     Q_OBJECT
     
 public:
-    explicit Bac_a_sable(QWidget *parent = 0);
+    explicit Bac_a_sable(QWidget *parent = 0, int id=-1);
     ~Bac_a_sable();
 
-
-
-    
 private slots:
     void onACliqueSurOk();
     void noClick();
