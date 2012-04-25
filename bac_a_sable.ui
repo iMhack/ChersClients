@@ -218,7 +218,7 @@ p, li { white-space: pre-wrap; }
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_2">
            <item>
-            <widget class="QTextEdit" name="MotifDeConsult">
+            <widget class="QTextEdit" name="motifDeConsult">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -648,7 +648,7 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="14" column="1">
-                 <widget class="QTextEdit" name="Examens"/>
+                 <widget class="QTextEdit" name="examens"/>
                 </item>
                 <item row="0" column="0">
                  <widget class="QLabel" name="label_23">
@@ -679,7 +679,7 @@ p, li { white-space: pre-wrap; }
                  </layout>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="ExtraTitre">
+                 <widget class="QLineEdit" name="extraTitre">
                   <property name="toolTip">
                    <string>Titre du contenu ci-dessous</string>
                   </property>
@@ -689,7 +689,7 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item>
-                 <widget class="QTextEdit" name="ExtraContenu">
+                 <widget class="QTextEdit" name="extraContenu">
                   <property name="toolTip">
                    <string>Contenu du label &quot;Autre&quot;</string>
                   </property>
@@ -727,7 +727,7 @@ p, li { white-space: pre-wrap; }
   <tabstop>telNumPriv</tabstop>
   <tabstop>telNumPort</tabstop>
   <tabstop>assurance</tabstop>
-  <tabstop>MotifDeConsult</tabstop>
+  <tabstop>motifDeConsult</tabstop>
   <tabstop>anamnSiege</tabstop>
   <tabstop>anamnIrradiation</tabstop>
   <tabstop>anamnQualite</tabstop>
@@ -759,13 +759,13 @@ p, li { white-space: pre-wrap; }
   <tabstop>anameseSysteMuscSquelet</tabstop>
   <tabstop>anameseSysteTete</tabstop>
   <tabstop>anameseSysteVisionVertiges</tabstop>
-  <tabstop>Examens</tabstop>
+  <tabstop>examens</tabstop>
   <tabstop>scrollArea</tabstop>
   <tabstop>buttonBox</tabstop>
-  <tabstop>ExtraTitre</tabstop>
+  <tabstop>extraTitre</tabstop>
   <tabstop>tabWidget</tabstop>
   <tabstop>scrollArea_2</tabstop>
-  <tabstop>ExtraContenu</tabstop>
+  <tabstop>extraContenu</tabstop>
  </tabstops>
  <resources/>
  <connections/>

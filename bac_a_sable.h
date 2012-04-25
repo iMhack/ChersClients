@@ -2,8 +2,6 @@
 #define BAC_A_SABLE_H
 
 #include <QWidget>
-#include <QTableView>
-#include <QSqlRelationalTableModel>
 
 namespace Ui {
 class Bac_a_sable;
@@ -22,6 +20,7 @@ public:
     
 private slots:
     void onACliqueSurOk();
+    void noClick();
 
 private:
     Ui::Bac_a_sable *ui;
